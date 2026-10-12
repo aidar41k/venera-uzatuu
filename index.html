@@ -1218,6 +1218,16 @@
     </defs>
   </svg>
 
+  <!-- ============ MUSIC TOGGLE & AUDIO ============ -->
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Музыканы күйгүзүү/өчүрүү">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+    </svg>
+  </button>
+  <audio id="bgAudio" loop preload="auto">
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
   <!-- ============ ENVELOPE ============ -->
   <div id="envelope" role="dialog" aria-label="Чакыруу">
     <div class="petals" id="envPetals"></div>
@@ -1344,7 +1354,7 @@
             <tbody id="calBody"></tbody>
           </table>
           <a class="btn cal-btn" target="_blank" rel="noopener"
-            href="https://www.google.com/calendar/render?action=TEMPLATE&text=%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E&dates=20261028T100000Z/20261028T140000Z&ctz=Asia/Bishkek&details=%D0%9A%D1%8B%D0%B7%D1%8B%D0%B1%D1%8B%D0%B7%20%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E.&location=%D0%9C%D0%B0%D0%B3%D0%BD%D0%B0%D1%82%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B">Календарга
+            href="https://www.google.com/calendar/render?action=TEMPLATE&text=%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E&dates=20261028T100000Z/20261028T140000Z&ctz=Asia/Bishkek&details=%D0%9A%D1%8B%D0%B7%D1%8B%D0%Bјиб%D1%8B%D0%B7%20%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E.&location=%D0%9C%D0%B0%D0%B3%D0%BD%D0%B0%D1%82%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B">Календарга
             кошуу</a>
         </div>
 
@@ -1443,6 +1453,33 @@
 
       var env = document.getElementById("envelope"),
         page = document.getElementById("page");
+
+      var musicToggle = document.getElementById("musicToggle");
+      var bgAudio = document.getElementById("bgAudio");
+
+      /* Music control */
+      if (musicToggle && bgAudio) {
+        musicToggle.addEventListener("click", function () {
+          if (bgAudio.paused) {
+            bgAudio.play().then(function () {
+              musicToggle.classList.add("playing");
+            }).catch(function (err) {
+              console.log("Play error:", err);
+            });
+          } else {
+            bgAudio.pause();
+            musicToggle.classList.remove("playing");
+          }
+        });
+
+        bgAudio.addEventListener("play", function () {
+          musicToggle.classList.add("playing");
+        });
+        bgAudio.addEventListener("pause", function () {
+          musicToggle.classList.remove("playing");
+        });
+      }
+
       function openInvite(instant) {
         if (instant) {
           env.classList.add("gone");
@@ -1451,6 +1488,16 @@
         document.body.classList.remove("locked");
         page.classList.add("show");
         window.scrollTo(0, 0);
+
+        // Try playing music when opening invite
+        if (bgAudio) {
+          bgAudio.play().then(function () {
+            if (musicToggle) musicToggle.classList.add("playing");
+          }).catch(function (err) {
+            console.log("Autoplay prevented:", err);
+          });
+        }
+
         setTimeout(revealCheck, 150);
         setTimeout(function () {
           env.style.display = "none";
