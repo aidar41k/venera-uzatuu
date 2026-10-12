@@ -1,1512 +1,1609 @@
 <!doctype html>
 <html lang="ky" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Венера — Кыз узатуу той</title>
-    <meta
-      name="description"
-      content="Сиздерди кызыбыз Венеранын Кыз узатуу тоюна чакырабыз! 28-октябрь, саат 16:00, Магнат рестораны"
-    />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#d4a373" />
-    <meta property="og:title" content="Венера — Кыз узатуу той" />
-    <meta
-      property="og:description"
-      content="Сиздерди кызыбыз Венеранын Кыз узатуу тоюна чакырабыз! 28-октябрь, саат 16:00, Магнат рестораны"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ky_KG" />
-<meta property="og:image" content="https://venera-uzatuu.vercel.app/preview.jpg">
-<meta property="og:image:secure_url" content="https://venera-uzatuu.vercel.app/preview.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Венера — Кыз узатуу той</title>
+  <meta name="description"
+    content="Сиздерди кызыбыз Венеранын Кыз узатуу тоюна чакырабыз! 28-октябрь, саат 16:00, Магнат рестораны" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#d4a373" />
+  <meta property="og:title" content="Венера — Кыз узатуу той" />
+  <meta property="og:description"
+    content="Сиздерди кызыбыз Венеранын Кыз узатуу тоюна чакырабыз! 28-октябрь, саат 16:00, Магнат рестораны" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ky_KG" />
+  <meta property="og:image" content="https://venera-uzatuu.vercel.app/preview.jpg">
+  <meta property="og:image:secure_url" content="https://venera-uzatuu.vercel.app/preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=EB+Garamond&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Viaoda+Libre&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --primary: #a36849;
-        --primary-d: #7f4e34;
-        --primary-m: #bc7c5b;
-        --accent: #d4a373;
-        --pale: #e9edc9;
-        --mist: #fefae0;
-        --bg-color: #faedcd;
-        --serif: "Lora", "Times New Roman", serif;
-        --title: "Viaoda Libre", "EB Garamond", cursive;
-        --script: "Alex Brush", "The Nautigal", cursive;
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-        -webkit-text-size-adjust: 100%;
-      }
-      body {
-        margin: 0;
-        font-family: var(--serif);
-        color: var(--primary);
-        background: var(--bg-color);
-        min-height: 100vh;
-        min-height: 100svh;
-        overflow-x: hidden;
-      }
-      body.locked {
-        overflow: hidden;
-      }
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-      }
-      button {
-        font: inherit;
-        cursor: pointer;
-      }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=EB+Garamond&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Viaoda+Libre&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #a36849;
+      --primary-d: #7f4e34;
+      --primary-m: #bc7c5b;
+      --accent: #d4a373;
+      --pale: #e9edc9;
+      --mist: #fefae0;
+      --bg-color: #faedcd;
+      --serif: "Lora", "Times New Roman", serif;
+      --title: "Viaoda Libre", "EB Garamond", cursive;
+      --script: "Alex Brush", "The Nautigal", cursive;
+    }
 
-      /* ---------- MUSIC TOGGLE BUTTON ---------- */
-      .music-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 90;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 1px solid rgba(163, 104, 73, 0.2);
-        background: rgba(255, 255, 255, 0.85);
-        color: var(--primary);
-        box-shadow: 0 4px 14px rgba(163, 104, 73, 0.2);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition:
-          transform 0.2s ease,
-          background 0.2s ease;
-        padding: 0;
-      }
-      .music-toggle:active {
-        transform: scale(0.95);
-      }
-      .music-toggle svg {
-        width: 20px;
-        height: 20px;
-        fill: currentColor;
-      }
-      .music-toggle.playing {
-        animation: spin 5s linear infinite;
-      }
-      @keyframes spin {
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-      /* ---------- ENVELOPE ---------- */
-      #envelope {
-        position: fixed;
-        inset: 0;
-        z-index: 50;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background: linear-gradient(to bottom right, #7f4e34, #a36849, #d4a373);
-        transition:
-          opacity 0.9s ease,
-          transform 0.9s ease,
-          visibility 0s linear 0.9s;
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--serif);
+      color: var(--primary);
+      background: var(--bg-color);
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow-x: hidden;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    /* ---------- MUSIC TOGGLE BUTTON ---------- */
+    .music-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 90;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(163, 104, 73, 0.2);
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--primary);
+      box-shadow: 0 4px 14px rgba(163, 104, 73, 0.2);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+      padding: 0;
+    }
+
+    .music-toggle:active {
+      transform: scale(0.95);
+    }
+
+    .music-toggle svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .music-toggle.playing {
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
       }
-      #envelope.gone {
+    }
+
+    /* ---------- ENVELOPE ---------- */
+    #envelope {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(to bottom right, #7f4e34, #a36849, #d4a373);
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s ease,
+        visibility 0s linear 0.9s;
+    }
+
+    #envelope.gone {
+      opacity: 0;
+      transform: scale(1.06);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .petals {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      top: -30px;
+    }
+
+    .petal svg {
+      display: block;
+    }
+
+    @keyframes ambient-fall {
+      0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
         opacity: 0;
-        transform: scale(1.06);
-        visibility: hidden;
-        pointer-events: none;
       }
-      .petals {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        overflow: hidden;
+
+      8% {
+        opacity: 0.85;
       }
-      .petal {
-        position: absolute;
-        top: -30px;
+
+      50% {
+        transform: translate3d(var(--sway), 55vh, 0) rotate(180deg);
       }
-      .petal svg {
-        display: block;
+
+      92% {
+        opacity: 0.7;
       }
-      @keyframes ambient-fall {
-        0% {
-          transform: translate3d(0, 0, 0) rotate(0deg);
-          opacity: 0;
-        }
-        8% {
-          opacity: 0.85;
-        }
-        50% {
-          transform: translate3d(var(--sway), 55vh, 0) rotate(180deg);
-        }
-        92% {
-          opacity: 0.7;
-        }
-        100% {
-          transform: translate3d(calc(var(--sway) * -1), 112vh, 0)
-            rotate(360deg);
-          opacity: 0;
-        }
+
+      100% {
+        transform: translate3d(calc(var(--sway) * -1), 112vh, 0) rotate(360deg);
+        opacity: 0;
       }
-      .env-wrap {
-        position: relative;
-        z-index: 10;
-      }
+    }
+
+    .env-wrap {
+      position: relative;
+      z-index: 10;
+    }
+
+    .env-card-wrap {
+      position: relative;
+      width: 310px;
+    }
+
+    @media (min-width: 640px) {
       .env-card-wrap {
-        position: relative;
-        width: 310px;
+        width: 340px;
       }
-      @media (min-width: 640px) {
-        .env-card-wrap {
-          width: 340px;
-        }
+    }
+
+    @media (min-width: 768px) {
+      .env-card-wrap {
+        width: 520px;
       }
-      @media (min-width: 768px) {
-        .env-card-wrap {
-          width: 520px;
-        }
+    }
+
+    @media (min-width: 1024px) {
+      .env-card-wrap {
+        width: 600px;
       }
-      @media (min-width: 1024px) {
-        .env-card-wrap {
-          width: 600px;
-        }
-      }
-      .seal {
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        width: 56px;
-        height: 56px;
-        transform: translate(-50%, -50%);
-        z-index: 30;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: radial-gradient(
-          circle at 30% 30%,
+    }
+
+    .seal {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      width: 56px;
+      height: 56px;
+      transform: translate(-50%, -50%);
+      z-index: 30;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 30%,
           var(--primary),
-          var(--primary-d)
-        );
+          var(--primary-d));
+      box-shadow:
+        0 4px 20px rgba(127, 78, 52, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3);
+      animation: seal-pulse 2s ease-in-out infinite;
+    }
+
+    .seal svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    @keyframes seal-pulse {
+
+      0%,
+      100% {
         box-shadow:
           0 4px 20px rgba(127, 78, 52, 0.5),
           inset 0 2px 4px rgba(255, 255, 255, 0.3);
-        animation: seal-pulse 2s ease-in-out infinite;
       }
-      .seal svg {
-        width: 28px;
-        height: 28px;
-        fill: #fff;
-      }
-      @keyframes seal-pulse {
-        0%,
-        100% {
-          box-shadow:
-            0 4px 20px rgba(127, 78, 52, 0.5),
-            inset 0 2px 4px rgba(255, 255, 255, 0.3);
-        }
-        50% {
-          box-shadow:
-            0 4px 30px 8px rgba(212, 163, 115, 0.55),
-            inset 0 2px 4px rgba(255, 255, 255, 0.3);
-        }
-      }
-      .env-card {
-        position: relative;
-        border-radius: 8px;
+
+      50% {
         box-shadow:
-          0 25px 60px -12px rgba(0, 0, 0, 0.3),
-          0 8px 24px rgba(0, 0, 0, 0.15);
+          0 4px 30px 8px rgba(212, 163, 115, 0.55),
+          inset 0 2px 4px rgba(255, 255, 255, 0.3);
       }
-      .env-bg {
-        position: absolute;
-        inset: 0;
-        border-radius: 8px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.98);
-        border: 1px solid rgba(163, 104, 73, 0.15);
-        clip-path: inset(0 round 8px);
-      }
+    }
+
+    .env-card {
+      position: relative;
+      border-radius: 8px;
+      box-shadow:
+        0 25px 60px -12px rgba(0, 0, 0, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .env-bg {
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(163, 104, 73, 0.15);
+      clip-path: inset(0 round 8px);
+    }
+
+    .flora {
+      position: absolute;
+      pointer-events: none;
+      width: 64%;
+      max-width: 300px;
+      top: 50%;
+      opacity: 0.25;
+    }
+
+    @media (min-width: 768px) {
       .flora {
-        position: absolute;
-        pointer-events: none;
-        width: 64%;
-        max-width: 300px;
-        top: 50%;
-        opacity: 0.25;
+        max-width: 360px;
       }
-      @media (min-width: 768px) {
-        .flora {
-          max-width: 360px;
-        }
-      }
-      .flora.l {
-        left: 0;
-        transform: translate(-35%, -50%) rotate(15deg);
-      }
-      .flora.r {
-        right: 0;
-        transform: translate(35%, -50%) scaleX(-1) rotate(15deg);
-      }
+    }
+
+    .flora.l {
+      left: 0;
+      transform: translate(-35%, -50%) rotate(15deg);
+    }
+
+    .flora.r {
+      right: 0;
+      transform: translate(35%, -50%) scaleX(-1) rotate(15deg);
+    }
+
+    .env-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 112px 24px 56px;
+    }
+
+    @media (min-width: 768px) {
       .env-content {
-        position: relative;
-        z-index: 10;
-        text-align: center;
-        padding: 112px 24px 56px;
+        padding: 96px 24px 32px;
       }
-      @media (min-width: 768px) {
-        .env-content {
-          padding: 96px 24px 32px;
-        }
-      }
+    }
+
+    .env-names {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.25;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-weight: 400;
+    }
+
+    @media (min-width: 640px) {
       .env-names {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 1.25;
-        font-size: 32px;
-        margin-bottom: 8px;
-        color: var(--primary);
-        font-weight: 400;
+        font-size: 38px;
       }
-      @media (min-width: 640px) {
-        .env-names {
-          font-size: 38px;
-        }
-      }
-      .env-names span {
-        display: block;
-        width: 100%;
-        text-align: center;
-        font-family: var(--title);
-      }
-      .orn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin-bottom: 8px;
-      }
-      .orn i {
-        display: block;
-        width: 40px;
-        height: 1px;
-        background: linear-gradient(to right, transparent, var(--primary));
-      }
-      .orn i:last-child {
-        background: linear-gradient(to left, transparent, var(--primary));
-      }
-      .orn b {
-        font-weight: 400;
-        font-size: 14px;
-        opacity: 0.7;
-      }
-      .env-date {
-        font-size: 18px;
-        color: rgba(163, 104, 73, 0.85);
-        margin-bottom: 20px;
-        line-height: 1.75;
-      }
-      .env-invite {
-        font-size: 18px;
-        font-weight: 300;
-        color: rgba(163, 104, 73, 0.85);
-        margin-bottom: 8px;
-        line-height: 1.75;
-      }
-      .env-invite-wrap {
-        margin-bottom: 24px;
-      }
-      .open-btn {
-        position: relative;
-        display: flex;
-        width: fit-content;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        padding: 10px 32px;
-        font-size: 18px;
-        line-height: 1.75;
-        font-weight: 600;
-        font-family: var(--serif);
-        color: #fff;
-        background: var(--primary);
-        border: 0;
-        border-radius: 999px;
-        box-shadow: 0 4px 14px rgba(163, 104, 73, 0.35);
-        text-decoration: none;
-        transition: transform 0.2s ease;
-      }
-      .open-btn:active {
-        transform: scale(0.97);
-      }
-      .open-btn .shine {
-        position: absolute;
-        top: 0;
-        left: -40px;
-        height: 100%;
-        width: 32px;
-        pointer-events: none;
-        background: linear-gradient(
-          90deg,
+    }
+
+    .env-names span {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: var(--title);
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .orn i {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--primary));
+    }
+
+    .orn i:last-child {
+      background: linear-gradient(to left, transparent, var(--primary));
+    }
+
+    .orn b {
+      font-weight: 400;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .env-date {
+      font-size: 18px;
+      color: rgba(163, 104, 73, 0.85);
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+
+    .env-invite {
+      font-size: 18px;
+      font-weight: 300;
+      color: rgba(163, 104, 73, 0.85);
+      margin-bottom: 8px;
+      line-height: 1.75;
+    }
+
+    .env-invite-wrap {
+      margin-bottom: 24px;
+    }
+
+    .open-btn {
+      position: relative;
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 10px 32px;
+      font-size: 18px;
+      line-height: 1.75;
+      font-weight: 600;
+      font-family: var(--serif);
+      color: #fff;
+      background: var(--primary);
+      border: 0;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(163, 104, 73, 0.35);
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .open-btn:active {
+      transform: scale(0.97);
+    }
+
+    .open-btn .shine {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      height: 100%;
+      width: 32px;
+      pointer-events: none;
+      background: linear-gradient(90deg,
           transparent,
           rgba(255, 255, 255, 0.4),
-          transparent
-        );
-        animation: shine 3s ease-in-out infinite;
-      }
-      @keyframes shine {
-        0% {
-          left: -40px;
-        }
-        60%,
-        100% {
-          left: calc(100% + 10px);
-        }
+          transparent);
+      animation: shine 3s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        left: -40px;
       }
 
-      /* ---------- MAIN PAGE ---------- */
-      #page {
-        position: relative;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1s ease 0.2s;
+      60%,
+      100% {
+        left: calc(100% + 10px);
       }
-      #page.show {
-        opacity: 1;
-        visibility: visible;
-      }
-      .bg-petals {
-        position: fixed;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        overflow: hidden;
-      }
-      .page-bg {
-        position: fixed;
-        inset: 0;
-        z-index: 0;
-        background:
-          radial-gradient(ellipse at 20% 0%, #fefae0 0%, transparent 55%),
-          radial-gradient(ellipse at 90% 100%, #e9edc9 0%, transparent 50%),
-          var(--bg-color);
-      }
-      main {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0 16px;
-        border-left: 1px solid rgba(163, 104, 73, 0.15);
-        border-right: 1px solid rgba(163, 104, 73, 0.15);
-      }
-      section {
-        position: relative;
-        padding: 64px 0px;
-        text-align: center;
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(26px);
-        transition:
-          opacity 0.9s ease,
-          transform 0.9s ease;
-      }
-      .reveal.in {
-        opacity: 1;
-        transform: none;
+    }
+
+    /* ---------- MAIN PAGE ---------- */
+    #page {
+      position: relative;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease 0.2s;
+    }
+
+    #page.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .bg-petals {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 20% 0%, #fefae0 0%, transparent 55%),
+        radial-gradient(ellipse at 90% 100%, #e9edc9 0%, transparent 50%),
+        var(--bg-color);
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 16px;
+      border-left: 1px solid rgba(163, 104, 73, 0.15);
+      border-right: 1px solid rgba(163, 104, 73, 0.15);
+    }
+
+    section {
+      position: relative;
+      padding: 64px 0px;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 56px;
+      padding-bottom: 64px;
+      overflow: hidden;
+    }
+
+    .hero .flora {
+      opacity: 0.2;
+      width: 70%;
+      max-width: 340px;
+      top: 14%;
+    }
+
+    .hero .flora.l {
+      transform: translate(-38%, -30%) rotate(20deg);
+    }
+
+    .hero .flora.r {
+      transform: translate(38%, -30%) scaleX(-1) rotate(20deg);
+    }
+
+    .hero .flora.bl {
+      left: 0;
+      top: auto;
+      bottom: 6%;
+      transform: translate(-40%, 30%) rotate(-10deg);
+    }
+
+    .hero .flora.br {
+      right: 0;
+      top: auto;
+      bottom: 6%;
+      transform: translate(40%, 30%) scaleX(-1) rotate(-10deg);
+    }
+
+    .kicker {
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--primary-m);
+      margin-bottom: 18px;
+    }
+
+    .hero-names {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: var(--title);
+      font-weight: 400;
+      line-height: 1.1;
+      font-size: clamp(42px, 12vw, 72px);
+      color: var(--primary);
+    }
+
+    .hero .orn {
+      margin: 20px 0 14px;
+    }
+
+    .hero .orn i {
+      width: 56px;
+    }
+
+    .hero-date {
+      font-size: clamp(17px, 4.6vw, 22px);
+      color: rgba(163, 104, 73, 0.9);
+      line-height: 1.6;
+    }
+
+    .hero-time {
+      font-size: clamp(16px, 4vw, 19px);
+      color: rgba(163, 104, 73, 0.75);
+      margin-top: 2px;
+    }
+
+    .poem-box {
+      margin: 28px auto 0;
+      padding: 20px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(163, 104, 73, 0.15);
+      font-style: italic;
+      line-height: 1.8;
+      color: var(--primary-d);
+      font-size: 16px;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: nowrap;
+    }
+
+    .cd {
+      min-width: 70px;
+      padding: 14px 8px 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(163, 104, 73, 0.14);
+      box-shadow: 0 6px 20px -8px rgba(163, 104, 73, 0.25);
+      backdrop-filter: blur(4px);
+    }
+
+    .cd b {
+      display: block;
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cd span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--primary-m);
+    }
+
+    .cd-past {
+      font-size: 18px;
+      color: var(--primary-m);
+      font-style: italic;
+      margin-top: 34px;
+    }
+
+    @media (max-width: 380px) {
+      .cd {
+        min-width: 60px;
       }
 
-      .hero {
-        min-height: 100vh;
-        min-height: 100svh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 56px;
-        padding-bottom: 64px;
-        overflow: hidden;
-      }
-      .hero .flora {
-        opacity: 0.2;
-        width: 70%;
-        max-width: 340px;
-        top: 14%;
-      }
-      .hero .flora.l {
-        transform: translate(-38%, -30%) rotate(20deg);
-      }
-      .hero .flora.r {
-        transform: translate(38%, -30%) scaleX(-1) rotate(20deg);
-      }
-      .hero .flora.bl {
-        left: 0;
-        top: auto;
-        bottom: 6%;
-        transform: translate(-40%, 30%) rotate(-10deg);
-      }
-      .hero .flora.br {
-        right: 0;
-        top: auto;
-        bottom: 6%;
-        transform: translate(40%, 30%) scaleX(-1) rotate(-10deg);
-      }
-      .kicker {
-        font-size: 14px;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--primary-m);
-        margin-bottom: 18px;
-      }
-      .hero-names {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: var(--title);
-        font-weight: 400;
-        line-height: 1.1;
-        font-size: clamp(42px, 12vw, 72px);
-        color: var(--primary);
-      }
-      .hero .orn {
-        margin: 20px 0 14px;
-      }
-      .hero .orn i {
-        width: 56px;
-      }
-      .hero-date {
-        font-size: clamp(17px, 4.6vw, 22px);
-        color: rgba(163, 104, 73, 0.9);
-        line-height: 1.6;
-      }
-      .hero-time {
-        font-size: clamp(16px, 4vw, 19px);
-        color: rgba(163, 104, 73, 0.75);
-        margin-top: 2px;
-      }
-      .poem-box {
-        margin: 28px auto 0;
-        padding: 20px 16px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.6);
-        border: 1px solid rgba(163, 104, 73, 0.15);
-        font-style: italic;
-        line-height: 1.8;
-        color: var(--primary-d);
-        font-size: 16px;
+      .cd b {
+        font-size: 26px;
       }
 
       .countdown {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 30px;
-        flex-wrap: nowrap;
+        gap: 7px;
       }
-      .cd {
-        min-width: 70px;
-        padding: 14px 8px 10px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(163, 104, 73, 0.14);
-        box-shadow: 0 6px 20px -8px rgba(163, 104, 73, 0.25);
-        backdrop-filter: blur(4px);
+    }
+
+    h2.sec-title {
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(28px, 7vw, 38px);
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .sec-sub {
+      margin: 12px auto 0;
+      max-width: 480px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(163, 104, 73, 0.85);
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      margin: 28px auto 0;
+      padding: 28px 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 15px 35px -15px rgba(163, 104, 73, 0.25);
+    }
+
+    .info {
+      display: flex;
+      justify-content: center;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-row div {
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--primary);
+    }
+
+    .map {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(163, 104, 73, 0.15);
+      background: var(--mist);
+    }
+
+    .map iframe {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 30px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(163, 104, 73, 0.35);
+      transition:
+        transform 0.2s ease,
+        background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--primary-d);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid rgba(163, 104, 73, 0.35);
+      box-shadow: none;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .map-btn {
+      margin-top: 20px;
+    }
+
+    /* ---------- LOADER STYLES ---------- */
+    .btn.loading {
+      position: relative;
+      color: transparent !important;
+      pointer-events: none;
+    }
+
+    .btn.loading::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      margin: -10px 0 0 -10px;
+      border: 2.5px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: btn-spin 0.6s linear infinite;
+    }
+
+    @keyframes btn-spin {
+      to {
+        transform: rotate(360deg);
       }
-      .cd b {
-        display: block;
-        font-family: var(--title);
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 1.1;
-        font-variant-numeric: tabular-nums;
-      }
-      .cd span {
-        display: block;
-        margin-top: 4px;
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: var(--primary-m);
-      }
-      .cd-past {
-        font-size: 18px;
-        color: var(--primary-m);
-        font-style: italic;
-        margin-top: 34px;
-      }
-      @media (max-width: 380px) {
-        .cd {
-          min-width: 60px;
-        }
-        .cd b {
-          font-size: 26px;
-        }
-        .countdown {
-          gap: 7px;
-        }
+    }
+
+    /* ---------- TOY ELLERI ---------- */
+    .hosts-box {
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px dashed rgba(163, 104, 73, 0.3);
+    }
+
+    .hosts-title {
+      font-family: var(--title);
+      font-size: 22px;
+      color: var(--primary-d);
+      margin-bottom: 12px;
+    }
+
+    .hosts-list {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--primary);
+    }
+
+    .thanks {
+      padding-bottom: 90px;
+    }
+
+    .thanks p {
+      max-width: 440px;
+      margin: 14px auto 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(163, 104, 73, 0.85);
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: rgba(127, 78, 52, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .modal.open {
+      display: flex;
+      animation: fade 0.25s ease;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
       }
 
-      h2.sec-title {
-        font-family: var(--title);
-        font-weight: 400;
-        font-size: clamp(28px, 7vw, 38px);
-        line-height: 1.2;
-        color: var(--primary);
-      }
-      .sec-sub {
-        margin: 12px auto 0;
-        max-width: 480px;
-        font-size: 16px;
-        line-height: 1.7;
-        color: rgba(163, 104, 73, 0.85);
-      }
-
-      .card {
-        position: relative;
-        width: 100%;
-        margin: 28px auto 0;
-        padding: 28px 20px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 15px 35px -15px rgba(163, 104, 73, 0.25);
-      }
-      .info {
-        display: flex;
-        justify-content: center;
-      }
-      .info-row {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-      }
-      .info-row div {
-        font-size: 18px;
-        line-height: 1.5;
-        color: var(--primary);
-      }
-
-      .map {
-        margin-top: 20px;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(163, 104, 73, 0.15);
-        background: var(--mist);
-      }
-      .map iframe {
-        display: block;
-        width: 100%;
-        height: 280px;
-        border: 0;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px 30px;
-        border-radius: 999px;
-        border: 0;
-        background: var(--primary);
-        color: #fff;
-        font-family: var(--serif);
-        font-size: 17px;
-        font-weight: 500;
-        text-decoration: none;
-        box-shadow: 0 4px 14px rgba(163, 104, 73, 0.35);
-        transition:
-          transform 0.2s ease,
-          background 0.2s;
-      }
-      .btn:hover {
-        background: var(--primary-d);
-      }
-      .btn:active {
-        transform: scale(0.97);
-      }
-      .btn.ghost {
-        background: transparent;
-        color: var(--primary);
-        border: 1px solid rgba(163, 104, 73, 0.35);
-        box-shadow: none;
-      }
-      .btn svg {
-        width: 18px;
-        height: 18px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 1.8;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      .map-btn {
-        margin-top: 20px;
-      }
-
-      /* ---------- LOADER STYLES ---------- */
-      .btn.loading {
-        position: relative;
-        color: transparent !important;
-        pointer-events: none;
-      }
-      .btn.loading::after {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        left: 50%;
-        margin: -10px 0 0 -10px;
-        border: 2.5px solid rgba(255, 255, 255, 0.3);
-        border-top-color: #fff;
-        border-radius: 50%;
-        animation: btn-spin 0.6s linear infinite;
-      }
-      @keyframes btn-spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* ---------- TOY ELLERI ---------- */
-      .hosts-box {
-        margin-top: 24px;
-        padding: 20px;
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px dashed rgba(163, 104, 73, 0.3);
-      }
-      .hosts-title {
-        font-family: var(--title);
-        font-size: 22px;
-        color: var(--primary-d);
-        margin-bottom: 12px;
-      }
-      .hosts-list {
-        font-size: 18px;
-        line-height: 1.8;
-        color: var(--primary);
-      }
-
-      .thanks {
-        padding-bottom: 90px;
-      }
-      .thanks p {
-        max-width: 440px;
-        margin: 14px auto 0;
-        font-size: 17px;
-        line-height: 1.7;
-        color: rgba(163, 104, 73, 0.85);
-      }
-
-      /* Modal */
-      .modal {
-        position: fixed;
-        inset: 0;
-        z-index: 100;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
-        background: rgba(127, 78, 52, 0.45);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-      }
-      .modal.open {
-        display: flex;
-        animation: fade 0.25s ease;
-      }
-      @keyframes fade {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      @keyframes rise {
-        from {
-          opacity: 0;
-          transform: translateY(18px) scale(0.98);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      .dialog {
-        position: relative;
-        width: 100%;
-        max-width: 440px;
-        max-height: calc(100svh - 32px);
-        overflow: auto;
-        border-radius: 14px;
-        padding: 34px 24px 26px;
-        background: #fff;
-        border: 1px solid rgba(163, 104, 73, 0.15);
-        box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.3);
-        animation: rise 0.35s ease;
-        text-align: center;
-      }
-      .x {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        border: 0;
-        background: transparent;
-        color: var(--primary);
-        font-size: 26px;
-        line-height: 1;
-        opacity: 0.6;
-      }
-      .x:hover {
+      to {
         opacity: 1;
-        background: var(--mist);
       }
-      .dialog h3 {
-        font-family: var(--title);
-        font-weight: 400;
-        font-size: 30px;
-        color: var(--primary);
-      }
-      .dialog .sub {
-        margin: 10px 0 22px;
-        font-size: 15px;
-        line-height: 1.65;
-        color: rgba(163, 104, 73, 0.8);
-      }
-      form {
-        text-align: left;
-      }
-      label.lbl,
-      .lbl {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 8px;
-        color: var(--primary);
-      }
-      input[type="text"] {
-        width: 100%;
-        padding: 13px 14px;
-        border-radius: 10px;
-        border: 1px solid rgba(163, 104, 73, 0.25);
-        background: #fff;
-        color: var(--primary);
-        font-family: var(--serif);
-        font-size: 16px;
-        outline: none;
-      }
-      input[type="text"]:focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(163, 104, 73, 0.12);
-      }
-      .field {
-        margin-bottom: 20px;
-      }
-      .choices {
-        display: grid;
-        gap: 10px;
-      }
-      .choice {
-        position: relative;
-      }
-      .choice input {
-        position: absolute;
+    }
+
+    @keyframes rise {
+      from {
         opacity: 0;
-        inset: 0;
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        margin: 0;
+        transform: translateY(18px) scale(0.98);
       }
-      .choice span {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 13px 14px;
-        border-radius: 10px;
-        border: 1px solid rgba(163, 104, 73, 0.25);
-        font-size: 15.5px;
-        line-height: 1.35;
-        transition: all 0.2s;
+
+      to {
+        opacity: 1;
+        transform: none;
       }
-      .choice span::before {
-        content: "";
-        flex: none;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 1.6px solid rgba(163, 104, 73, 0.45);
-        transition: all 0.2s;
-      }
-      .choice input:checked + span {
-        border-color: var(--primary);
-        background: var(--mist);
-      }
-      .choice input:checked + span::before {
-        border-color: var(--primary);
-        background: radial-gradient(
-          circle,
+    }
+
+    .dialog {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      max-height: calc(100svh - 32px);
+      overflow: auto;
+      border-radius: 14px;
+      padding: 34px 24px 26px;
+      background: #fff;
+      border: 1px solid rgba(163, 104, 73, 0.15);
+      box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.3);
+      animation: rise 0.35s ease;
+      text-align: center;
+    }
+
+    .x {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 0;
+      background: transparent;
+      color: var(--primary);
+      font-size: 26px;
+      line-height: 1;
+      opacity: 0.6;
+    }
+
+    .x:hover {
+      opacity: 1;
+      background: var(--mist);
+    }
+
+    .dialog h3 {
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 30px;
+      color: var(--primary);
+    }
+
+    .dialog .sub {
+      margin: 10px 0 22px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(163, 104, 73, 0.8);
+    }
+
+    form {
+      text-align: left;
+    }
+
+    label.lbl,
+    .lbl {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(163, 104, 73, 0.25);
+      background: #fff;
+      color: var(--primary);
+      font-family: var(--serif);
+      font-size: 16px;
+      outline: none;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(163, 104, 73, 0.12);
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .choices {
+      display: grid;
+      gap: 10px;
+    }
+
+    .choice {
+      position: relative;
+    }
+
+    .choice input {
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .choice span {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(163, 104, 73, 0.25);
+      font-size: 15.5px;
+      line-height: 1.35;
+      transition: all 0.2s;
+    }
+
+    .choice span::before {
+      content: "";
+      flex: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.6px solid rgba(163, 104, 73, 0.45);
+      transition: all 0.2s;
+    }
+
+    .choice input:checked+span {
+      border-color: var(--primary);
+      background: var(--mist);
+    }
+
+    .choice input:checked+span::before {
+      border-color: var(--primary);
+      background: radial-gradient(circle,
           var(--primary) 0 45%,
-          transparent 50%
-        );
-      }
-      .hp {
-        position: absolute !important;
-        left: -9999px;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-      }
-      .err {
-        margin: 0 0 14px;
-        padding: 10px 12px;
-        border-radius: 8px;
-        background: #fdecec;
-        color: #9b1c1c;
-        font-size: 14px;
-        display: none;
-      }
-      .err.show {
-        display: block;
-      }
-      .submit {
-        width: 100%;
-        margin-top: 4px;
-      }
-      .done {
-        padding: 6px 0;
-      }
-      .done h3 {
-        margin: 8px 0 12px;
-      }
-      .done p {
-        font-size: 16px;
-        line-height: 1.65;
-        color: rgba(163, 104, 73, 0.85);
-      }
-      .check {
-        width: 56px;
-        height: 56px;
-        margin: 0 auto;
-        border-radius: 50%;
-        background: var(--primary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .check svg {
-        width: 28px;
-        height: 28px;
-        stroke: #fff;
-        fill: none;
-        stroke-width: 2.4;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      [hidden] {
-        display: none !important;
-      }
+          transparent 50%);
+    }
 
-      /* ---------- BANQUET ---------- */
-      .time-badge {
-        margin: 14px auto 24px;
-        width: 112px;
-        height: 112px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: radial-gradient(circle at 30% 30%, #fff, var(--mist));
-        border: 1px solid rgba(163, 104, 73, 0.18);
-        box-shadow: 0 12px 30px -14px rgba(163, 104, 73, 0.3);
-      }
-      .time-badge b {
-        font-family: var(--title);
-        font-size: 26px;
-        color: var(--primary);
-      }
-      .date-row {
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 8px;
-      }
-      .date-row .num {
-        font-family: var(--title);
-        font-weight: 400;
-        font-size: clamp(64px, 16vw, 96px);
-        color: var(--primary);
-        line-height: 1;
-      }
-      .date-col {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        align-items: flex-start;
-      }
-      .date-col span {
-        font-size: 13px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--primary-m);
-      }
-      .date-col b {
-        font-family: var(--title);
-        font-size: 22px;
-        color: var(--primary);
-      }
+    .hp {
+      position: absolute !important;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
 
-      /* ---------- CALENDAR ---------- */
-      .cal {
-        max-width: 360px;
-        margin: 32px auto 0;
-        padding: 24px 18px;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.96);
-        border: 1px solid rgba(163, 104, 73, 0.15);
-        box-shadow: 0 20px 50px -22px rgba(163, 104, 73, 0.25);
-      }
-      .cal h4 {
-        font-family: var(--title);
-        font-weight: 400;
-        font-size: 20px;
-        color: var(--primary);
-        margin-bottom: 14px;
-      }
-      .cal table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      .cal th {
-        font-size: 11px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--primary-m);
-        padding: 4px 0;
-        font-weight: 500;
-      }
-      .cal td {
-        padding: 6px 0;
-        text-align: center;
-        font-size: 14px;
-        color: rgba(163, 104, 73, 0.8);
-      }
-      .cal td.pad {
-        color: transparent;
-      }
-      .cal td.sel {
-        position: relative;
-        color: #fff;
-        font-weight: 600;
-      }
-      .cal td.sel span {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        background: var(--primary);
-      }
-      .cal-btn {
-        display: block;
-        width: 100%;
-        margin-top: 18px;
-        text-align: center;
-      }
+    .err {
+      margin: 0 0 14px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #fdecec;
+      color: #9b1c1c;
+      font-size: 14px;
+      display: none;
+    }
 
-      footer {
-        padding: 26px 20px 40px;
-        text-align: center;
-        font-size: 13px;
-        color: rgba(163, 104, 73, 0.6);
-      }
-    </style>
-  </head>
-  <body class="locked">
-    <!-- SVG Defs -->
-    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <defs>
-        <g id="blossom">
-          <g fill="#fefae0" stroke="#d4a373" stroke-width="1.4">
-            <ellipse cx="0" cy="-17" rx="8.5" ry="16" />
-            <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(72)" />
-            <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(144)" />
-            <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(216)" />
-            <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(288)" />
-          </g>
-          <circle r="6.5" fill="#a36849" />
-          <circle r="2.6" fill="#e9edc9" />
+    .err.show {
+      display: block;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .done {
+      padding: 6px 0;
+    }
+
+    .done h3 {
+      margin: 8px 0 12px;
+    }
+
+    .done p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: rgba(163, 104, 73, 0.85);
+    }
+
+    .check {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .check svg {
+      width: 28px;
+      height: 28px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    /* ---------- BANQUET ---------- */
+    .time-badge {
+      margin: 14px auto 24px;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--mist));
+      border: 1px solid rgba(163, 104, 73, 0.18);
+      box-shadow: 0 12px 30px -14px rgba(163, 104, 73, 0.3);
+    }
+
+    .time-badge b {
+      font-family: var(--title);
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .date-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .date-row .num {
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: clamp(64px, 16vw, 96px);
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .date-col {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    .date-col span {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary-m);
+    }
+
+    .date-col b {
+      font-family: var(--title);
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    /* ---------- CALENDAR ---------- */
+    .cal {
+      max-width: 360px;
+      margin: 32px auto 0;
+      padding: 24px 18px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(163, 104, 73, 0.15);
+      box-shadow: 0 20px 50px -22px rgba(163, 104, 73, 0.25);
+    }
+
+    .cal h4 {
+      font-family: var(--title);
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+
+    .cal table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .cal th {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-m);
+      padding: 4px 0;
+      font-weight: 500;
+    }
+
+    .cal td {
+      padding: 6px 0;
+      text-align: center;
+      font-size: 14px;
+      color: rgba(163, 104, 73, 0.8);
+    }
+
+    .cal td.pad {
+      color: transparent;
+    }
+
+    .cal td.sel {
+      position: relative;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .cal td.sel span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .cal-btn {
+      display: block;
+      width: 100%;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    footer {
+      padding: 26px 20px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(163, 104, 73, 0.6);
+    }
+  </style>
+</head>
+
+<body class="locked">
+  <!-- SVG Defs -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <g id="blossom">
+        <g fill="#fefae0" stroke="#d4a373" stroke-width="1.4">
+          <ellipse cx="0" cy="-17" rx="8.5" ry="16" />
+          <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(72)" />
+          <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(144)" />
+          <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(216)" />
+          <ellipse cx="0" cy="-17" rx="8.5" ry="16" transform="rotate(288)" />
         </g>
-        <symbol id="hoa" viewBox="0 0 300 300">
-          <g
-            fill="none"
-            stroke="#d4a373"
-            stroke-width="2.2"
-            stroke-linecap="round"
-          >
-            <path d="M18 288C60 230 96 178 150 138S246 70 286 22" />
-          </g>
-          <use href="#blossom" transform="translate(150 138) scale(1.15)" />
-          <use href="#blossom" transform="translate(68 222) scale(.8)" />
-          <use href="#blossom" transform="translate(232 82) scale(.9)" />
-        </symbol>
-        <symbol id="petal" viewBox="0 0 24 24">
-          <ellipse cx="12" cy="12" rx="4" ry="7" fill="currentColor" />
-        </symbol>
-        <symbol id="heart-icon" viewBox="0 0 24 24">
-          <path
-            fill="currentColor"
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-          />
-        </symbol>
-      </defs>
-    </svg>
+        <circle r="6.5" fill="#a36849" />
+        <circle r="2.6" fill="#e9edc9" />
+      </g>
+      <symbol id="hoa" viewBox="0 0 300 300">
+        <g fill="none" stroke="#d4a373" stroke-width="2.2" stroke-linecap="round">
+          <path d="M18 288C60 230 96 178 150 138S246 70 286 22" />
+        </g>
+        <use href="#blossom" transform="translate(150 138) scale(1.15)" />
+        <use href="#blossom" transform="translate(68 222) scale(.8)" />
+        <use href="#blossom" transform="translate(232 82) scale(.9)" />
+      </symbol>
+      <symbol id="petal" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="12" rx="4" ry="7" fill="currentColor" />
+      </symbol>
+      <symbol id="heart-icon" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </symbol>
+    </defs>
+  </svg>
 
-    <!-- ============ ENVELOPE ============ -->
-    <div id="envelope" role="dialog" aria-label="Чакыруу">
-      <div class="petals" id="envPetals"></div>
-      <div class="env-wrap">
-        <div class="env-card-wrap">
-          <div class="seal">
-            <svg viewBox="0 0 24 24"><use href="#heart-icon" /></svg>
+  <!-- ============ ENVELOPE ============ -->
+  <div id="envelope" role="dialog" aria-label="Чакыруу">
+    <div class="petals" id="envPetals"></div>
+    <div class="env-wrap">
+      <div class="env-card-wrap">
+        <div class="seal">
+          <svg viewBox="0 0 24 24">
+            <use href="#heart-icon" />
+          </svg>
+        </div>
+        <div class="env-card">
+          <div class="env-bg">
+            <svg class="flora l" viewBox="0 0 300 300" aria-hidden="true">
+              <use href="#hoa" />
+            </svg>
+            <svg class="flora r" viewBox="0 0 300 300" aria-hidden="true">
+              <use href="#hoa" />
+            </svg>
           </div>
-          <div class="env-card">
-            <div class="env-bg">
-              <svg class="flora l" viewBox="0 0 300 300" aria-hidden="true">
-                <use href="#hoa" />
-              </svg>
-              <svg class="flora r" viewBox="0 0 300 300" aria-hidden="true">
-                <use href="#hoa" />
-              </svg>
+          <div class="env-content">
+            <h1 class="env-names">
+              <span>Венера</span>
+              <span style="font-size: 26px; margin-top: 6px;">Кыз узатуу той</span>
+            </h1>
+            <div class="orn"><i></i><b>❦</b><i></i></div>
+            <div class="env-date"><span>28-октябрь 2026-жыл</span></div>
+            <div class="env-invite-wrap">
+              <p class="env-invite"><span>Чакыруу кагазы</span></p>
             </div>
-            <div class="env-content">
-              <h1 class="env-names">
-                <span>Венера</span>
-                <span style="font-size: 26px; margin-top: 6px;">Кыз узатуу той</span>
-              </h1>
-              <div class="orn"><i></i><b>❦</b><i></i></div>
-              <div class="env-date"><span>28-октябрь 2026-жыл</span></div>
-              <div class="env-invite-wrap">
-                <p class="env-invite"><span>Чакыруу кагазы</span></p>
-              </div>
-              <a class="open-btn" id="openBtn" href="?open=1" rel="nofollow"
-                ><span>Ачуу</span><span class="shine"></span
-              ></a>
-            </div>
+            <a class="open-btn" id="openBtn" href="?open=1" rel="nofollow"><span>Ачуу</span><span
+                class="shine"></span></a>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ============ MAIN PAGE ============ -->
-    <div class="page-bg"></div>
-    <div class="bg-petals" id="pagePetals"></div>
+  <!-- ============ MAIN PAGE ============ -->
+  <div class="page-bg"></div>
+  <div class="bg-petals" id="pagePetals"></div>
 
-    <div id="page">
-      <main>
-        <section class="hero" id="top">
-          <svg class="flora l" viewBox="0 0 300 300" aria-hidden="true">
-            <use href="#hoa" />
-          </svg>
-          <svg class="flora r" viewBox="0 0 300 300" aria-hidden="true">
-            <use href="#hoa" />
-          </svg>
+  <div id="page">
+    <main>
+      <section class="hero" id="top">
+        <svg class="flora l" viewBox="0 0 300 300" aria-hidden="true">
+          <use href="#hoa" />
+        </svg>
+        <svg class="flora r" viewBox="0 0 300 300" aria-hidden="true">
+          <use href="#hoa" />
+        </svg>
 
-          <p class="kicker reveal">Кыз узатуу тоюна чакырабыз</p>
-          <h2 class="hero-names reveal" style="transition-delay: 0.1s">
-            <span>Венера</span>
-          </h2>
-          <div class="orn reveal" style="transition-delay: 0.2s">
-            <i></i><b>❦</b><i></i>
-          </div>
-
-          <div class="poem-box reveal" style="transition-delay: 0.25s">
-            Ак тилек, ак батасын берүү үчүн,<br />
-            Бактылуу кызыбыз Венеранын тойун көрөлү.<br />
-            Сиздерди узатууга чакырабыз,<br />
-            Төрүбүздөн орун алып өтүңүздөр.
-          </div>
-
-          <p
-            class="hero-date reveal"
-            style="transition-delay: 0.3s; margin-top: 20px;"
-          >
-            28-октябрь 2026-жыл
-          </p>
-          <p class="hero-time reveal" style="transition-delay: 0.35s">
-            Саат 16:00
-          </p>
-        </section>
-
-        <section id="party">
-          <h2 class="sec-title reveal">Кадырлуу коноктор!</h2>
-          <p class="sec-sub reveal">
-            Сиздерди кызыбыз <b>Венеранын</b> Кыз узатуу тоюна келип, ак
-            батаңыздарды берип кетүүгө чакырабыз!
-          </p>
-
-          <div class="time-badge reveal"><b>16:00</b></div>
-          <div class="date-row reveal">
-            <span class="num">28</span>
-            <div class="date-col">
-              <span>Шаршемби</span>
-              <b>Октябрь 2026</b>
-            </div>
-          </div>
-
-          <!-- Той ээлери -->
-          <div class="hosts-box reveal">
-            <div class="hosts-title">Той ээлери:</div>
-            <div class="hosts-list">
-              <b>Нурбек</b> жана <b>Базаргүл</b>
-            </div>
-          </div>
-
-          <h3
-            class="sec-title reveal"
-            style="font-size: 24px; margin-top: 40px"
-          >
-            Тойго чейин калды:
-          </h3>
-          <div id="countdown" class="countdown reveal" aria-live="off">
-            <div class="cd"><b id="cd-d">--</b><span>Күн</span></div>
-            <div class="cd"><b id="cd-h">--</b><span>Саат</span></div>
-            <div class="cd"><b id="cd-m">--</b><span>Мүн</span></div>
-            <div class="cd"><b id="cd-s">--</b><span>Сек</span></div>
-          </div>
-          <p id="cd-past" class="cd-past" hidden>Той башталды!</p>
-
-          <div class="cal reveal">
-            <h4>Октябрь 2026</h4>
-            <table>
-              <thead>
-                <tr>
-                  <th>Дш</th>
-                  <th>Шш</th>
-                  <th>Шр</th>
-                  <th>Бш</th>
-                  <th>Жм</th>
-                  <th>Иш</th>
-                  <th>Жк</th>
-                </tr>
-              </thead>
-              <tbody id="calBody"></tbody>
-            </table>
-            <a
-              class="btn cal-btn"
-              target="_blank"
-              rel="noopener"
-              href="https://www.google.com/calendar/render?action=TEMPLATE&text=%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E&dates=20261028T100000Z/20261028T140000Z&ctz=Asia/Bishkek&details=%D0%9A%D1%8B%D0%B7%D1%8B%D0%B1%D1%8B%D0%B7%20%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E.&location=%D0%9C%D0%B0%D0%B3%D0%BD%D0%B0%D1%82%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B"
-              >Календарга кошуу</a
-            >
-          </div>
-
-          <div class="reveal" style="margin-top: 30px">
-            <button class="btn" id="rsvpOpen2" type="button">
-              КЕЛҮҮҢҮЗДҮ ЫРАСТАҢЫЗ
-            </button>
-          </div>
-        </section>
-
-        <section id="venue">
-          <h2 class="sec-title reveal">Той өтө турган дарек</h2>
-          <div class="card reveal">
-            <div class="info">
-              <div class="info-row">
-                <div><b>«Магнат»</b> рестораны</div>
-              </div>
-            </div>
-            <div class="map">
-              <iframe title="Карта" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-                src="https://maps.google.com/maps?q=Magnat+restaurant&amp;z=16&amp;output=embed"></iframe>
-            </div>
-            <a class="btn map-btn" target="_blank" rel="noopener"
-               href="https://www.google.com/maps/search/?api=1&amp;query=Magnat+restaurant">
-              <svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>Маршрутту көрсөтүү
-            </a>
-          </div>
-        </section>
-
-        <section class="thanks">
-          <h2 class="sec-title reveal">Сиздерди күтөбүз!</h2>
-          <p class="reveal">
-            Сиздердин келип ак батаңыздарды берип кетишиңиздер биз үчүн чоң
-            сыймык!
-          </p>
-        </section>
-      </main>
-      <footer>Венера — Кыз узатуу тою · 28-октябрь 2026</footer>
-    </div>
-
-    <!-- Modal Form -->
-    <div class="modal" id="modal" aria-hidden="true">
-      <div class="dialog" role="dialog" aria-modal="true">
-        <button class="x" type="button" id="modalClose" aria-label="Жабуу">
-          &times;
-        </button>
-
-        <div id="formView">
-          <h3>Катышууну ырастоо</h3>
-          <p class="sub">
-            Сураныч, тойго келериңизди алдын ала ырастап коюңуз.
-          </p>
-          <form id="rsvpForm" novalidate autocomplete="off">
-            <div class="field">
-              <label class="lbl" for="name">Сиздин атыңыз</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                maxlength="80"
-                placeholder="Атыңызды жазыңыз"
-                required
-                autocomplete="name"
-              />
-            </div>
-            <div class="field">
-              <div class="lbl">Тойго келе аласызбы?</div>
-              <div class="choices">
-                <label class="choice"
-                  ><input type="radio" name="status" value="yes" checked /><span
-                    >Ооба, буйруса барам</span
-                  ></label
-                >
-                <label class="choice"
-                  ><input type="radio" name="status" value="no" /><span
-                    >Тилекке каршы, бара албайм</span
-                  ></label
-                >
-              </div>
-            </div>
-            <input
-              class="hp"
-              type="text"
-              name="website"
-              tabindex="-1"
-              autocomplete="off"
-              aria-hidden="true"
-            />
-            <p class="err" id="err" role="alert">Катачылык чыкты</p>
-            <button class="btn submit" id="submit" type="submit">
-              Жиберүү
-            </button>
-          </form>
+        <p class="kicker reveal">Кыз узатуу тоюна чакырабыз</p>
+        <h2 class="hero-names reveal" style="transition-delay: 0.1s">
+          <span>Венера</span>
+        </h2>
+        <div class="orn reveal" style="transition-delay: 0.2s">
+          <i></i><b>❦</b><i></i>
         </div>
 
-        <div id="doneView" class="done" hidden>
-          <div class="check">
-            <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
-          </div>
-          <h3>Чоң рахмат!</h3>
-          <p>Жуобуңуз кабыл алынды.</p>
-          <button class="btn ghost" type="button" id="doneClose">Жабуу</button>
+        <div class="poem-box reveal" style="transition-delay: 0.25s">
+          Ак тилек, ак батасын берүү үчүн,<br />
+          Бактылуу кызыбыз Венеранын тойун көрөлү.<br />
+          Сиздерди узатууга чакырабыз,<br />
+          Төрүбүздөн орун алып өтүңүздөр.
         </div>
+
+        <p class="hero-date reveal" style="transition-delay: 0.3s; margin-top: 20px;">
+          28-октябрь 2026-жыл
+        </p>
+        <p class="hero-time reveal" style="transition-delay: 0.35s">
+          Саат 16:00
+        </p>
+      </section>
+
+      <section id="party">
+        <h2 class="sec-title reveal">Кадырлуу коноктор!</h2>
+        <p class="sec-sub reveal">
+          Сиздерди кызыбыз <b>Венеранын</b> Кыз узатуу тоюна келип, ак
+          батаңыздарды берип кетүүгө чакырабыз!
+        </p>
+
+        <div class="time-badge reveal"><b>16:00</b></div>
+        <div class="date-row reveal">
+          <span class="num">28</span>
+          <div class="date-col">
+            <span>Шаршемби</span>
+            <b>Октябрь 2026</b>
+          </div>
+        </div>
+
+        <!-- Той ээлери -->
+        <div class="hosts-box reveal">
+          <div class="hosts-title">Той ээлери:</div>
+          <div class="hosts-list">
+            <b>Нурбек</b> жана <b>Базаргүл</b>
+          </div>
+        </div>
+
+        <h3 class="sec-title reveal" style="font-size: 24px; margin-top: 40px">
+          Тойго чейин калды:
+        </h3>
+        <div id="countdown" class="countdown reveal" aria-live="off">
+          <div class="cd"><b id="cd-d">--</b><span>Күн</span></div>
+          <div class="cd"><b id="cd-h">--</b><span>Саат</span></div>
+          <div class="cd"><b id="cd-m">--</b><span>Мүн</span></div>
+          <div class="cd"><b id="cd-s">--</b><span>Сек</span></div>
+        </div>
+        <p id="cd-past" class="cd-past" hidden>Той башталды!</p>
+
+        <div class="cal reveal">
+          <h4>Октябрь 2026</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Дш</th>
+                <th>Шш</th>
+                <th>Шр</th>
+                <th>Бш</th>
+                <th>Жм</th>
+                <th>Иш</th>
+                <th>Жк</th>
+              </tr>
+            </thead>
+            <tbody id="calBody"></tbody>
+          </table>
+          <a class="btn cal-btn" target="_blank" rel="noopener"
+            href="https://www.google.com/calendar/render?action=TEMPLATE&text=%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E&dates=20261028T100000Z/20261028T140000Z&ctz=Asia/Bishkek&details=%D0%9A%D1%8B%D0%B7%D1%8B%D0%B1%D1%8B%D0%B7%20%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BD%D1%8B%D0%BD%20%D0%BA%D1%8B%D0%B7%20%D1%83%D0%B7%D0%B0%D1%82%D1%83%D1%83%20%D1%82%D0%BE%D1%8E.&location=%D0%9C%D0%B0%D0%B3%D0%BD%D0%B0%D1%82%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B">Календарга
+            кошуу</a>
+        </div>
+
+        <div class="reveal" style="margin-top: 30px">
+          <button class="btn" id="rsvpOpen2" type="button">
+            КЕЛҮҮҢҮЗДҮ ЫРАСТАҢЫЗ
+          </button>
+        </div>
+      </section>
+
+      <section id="venue">
+        <h2 class="sec-title reveal">Той өтө турган дарек</h2>
+        <div class="card reveal">
+          <div class="info">
+            <div class="info-row">
+              <div><b>«Магнат»</b> рестораны</div>
+            </div>
+          </div>
+          <div class="map">
+            <iframe title="Карта" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+              src="https://maps.google.com/maps?q=Magnat+restaurant&amp;z=16&amp;output=embed"></iframe>
+          </div>
+          <a class="btn map-btn" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Magnat+restaurant">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 11l18-8-8 18-2-8-8-2z" />
+            </svg>Маршрутту көрсөтүү
+          </a>
+        </div>
+      </section>
+
+      <section class="thanks">
+
+        <h2 class="sec-title reveal">Сиздерди күтөбүз!</h2>
+        <p class="reveal">
+          Сиздердин келип ак батаңыздарды берип кетишиңиздер биз үчүн чоң
+          сыймык!
+        </p>
+      </section>
+    </main>
+    <footer>Венера — Кыз узатуу тою · 28-октябрь 2026</footer>
+  </div>
+
+  <!-- Modal Form -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="dialog" role="dialog" aria-modal="true">
+      <button class="x" type="button" id="modalClose" aria-label="Жабуу">
+        &times;
+      </button>
+
+      <div id="formView">
+        <h3>Катышууну ырастоо</h3>
+        <p class="sub">
+          Сураныч, тойго келериңизди алдын ала ырастап коюңуз.
+        </p>
+        <form id="rsvpForm" novalidate autocomplete="off">
+          <div class="field">
+            <label class="lbl" for="name">Сиздин атыңыз</label>
+            <input type="text" id="name" name="name" maxlength="80" placeholder="Атыңызды жазыңыз" required
+              autocomplete="name" />
+          </div>
+          <div class="field">
+            <div class="lbl">Тойго келе аласызбы?</div>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="status" value="yes" checked /><span>Ооба, буйруса
+                  барам</span></label>
+              <label class="choice"><input type="radio" name="status" value="no" /><span>Тилекке каршы, бара
+                  албайм</span></label>
+            </div>
+          </div>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="err" id="err" role="alert">Катачылык чыкты</p>
+          <button class="btn submit" id="submit" type="submit">
+            Жиберүү
+          </button>
+        </form>
+      </div>
+
+      <div id="doneView" class="done" hidden>
+        <div class="check">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12.5l4.5 4.5L19 7.5" />
+          </svg>
+        </div>
+        <h3>Чоң рахмат!</h3>
+        <p>Жуобуңуз кабыл алынды.</p>
+        <button class="btn ghost" type="button" id="doneClose">Жабуу</button>
       </div>
     </div>
+  </div>
 
-    <script>
-      (function () {
-        /* Target Date: Oct 28, 2026, 16:00 (Bishkek Time UTC+6) */
-        var TARGET = Date.parse("2026-10-28T16:00:00+06:00");
+  <script>
+    (function () {
+      /* Target Date: Oct 28, 2026, 16:00 (Bishkek Time UTC+6) */
+      var TARGET = Date.parse("2026-10-28T16:00:00+06:00");
 
-        var env = document.getElementById("envelope"),
-          page = document.getElementById("page");
-        function openInvite(instant) {
-          if (instant) {
-            env.classList.add("gone");
-            env.style.transition = "none";
-          } else env.classList.add("gone");
-          document.body.classList.remove("locked");
-          page.classList.add("show");
-          window.scrollTo(0, 0);
-          setTimeout(revealCheck, 150);
-          setTimeout(function () {
-            env.style.display = "none";
-          }, 1000);
-        }
-        document
-          .getElementById("openBtn")
-          .addEventListener("click", function (e) {
-            e.preventDefault();
-            openInvite(false);
-          });
-
-        /* Reveal animation */
-        var io =
-          "IntersectionObserver" in window
-            ? new IntersectionObserver(
-                function (es) {
-                  es.forEach(function (e) {
-                    if (e.isIntersecting) {
-                      e.target.classList.add("in");
-                      io.unobserve(e.target);
-                    }
-                  });
-                },
-                { threshold: 0.15 },
-              )
-            : null;
-        var revealEls = [].slice.call(document.querySelectorAll(".reveal"));
-        function revealCheck() {
-          revealEls.forEach(function (el) {
-            io ? io.observe(el) : el.classList.add("in");
-          });
-        }
-        if (!io) revealCheck();
-
-        var cd = {
-          d: document.getElementById("cd-d"),
-          h: document.getElementById("cd-h"),
-          m: document.getElementById("cd-m"),
-          s: document.getElementById("cd-s"),
-        };
-        function pad(n) {
-          return n < 10 ? "0" + n : "" + n;
-        }
-        function tick() {
-          var diff = TARGET - Date.now();
-          if (isNaN(diff)) return;
-          if (diff <= 0) {
-            document.getElementById("countdown").hidden = true;
-            document.getElementById("cd-past").hidden = false;
-            return;
-          }
-          var s = Math.floor(diff / 1000);
-          cd.d.textContent = Math.floor(s / 86400);
-          cd.h.textContent = pad(Math.floor((s % 86400) / 3600));
-          cd.m.textContent = pad(Math.floor((s % 3600) / 60));
-          cd.s.textContent = pad(s % 60);
-        }
-        tick();
-        setInterval(tick, 1000);
-
-        /* Calendar: Oct 2026 (Oct 1 is Thursday -> col index 3) */
-        (function () {
-          var body = document.getElementById("calBody");
-          if (!body) return;
-          var daysInMonth = 31,
-            firstWeekday = 3;
-          var rows = "",
-            cell = 0,
-            day = 1;
-          for (var r = 0; r < 6 && day <= daysInMonth; r++) {
-            var tr = "<tr>";
-            for (var c = 0; c < 7; c++, cell++) {
-              if (cell < firstWeekday || day > daysInMonth) {
-                tr += '<td class="pad">0</td>';
-              } else {
-                var sel = day === 28;
-                tr += sel
-                  ? '<td class="sel"><span>' + day + "</span></td>"
-                  : "<td>" + day + "</td>";
-                day++;
-              }
-            }
-            tr += "</tr>";
-            rows += tr;
-          }
-          body.innerHTML = rows;
-        })();
-
-        /* RSVP modal */
-        var modal = document.getElementById("modal"),
-          form = document.getElementById("rsvpForm");
-        var formView = document.getElementById("formView"),
-          doneView = document.getElementById("doneView");
-        var nameEl = document.getElementById("name"),
-          errEl = document.getElementById("err"),
-          submitEl = document.getElementById("submit");
-
-        function openModal() {
-          formView.hidden = false;
-          doneView.hidden = true;
-          errEl.classList.remove("show");
-          modal.classList.add("open");
-          document.body.classList.add("locked");
-        }
-        function closeModal() {
-          modal.classList.remove("open");
-          document.body.classList.remove("locked");
-        }
-        document.getElementById("rsvpOpen2").onclick = openModal;
-        document.getElementById("modalClose").onclick = closeModal;
-        document.getElementById("doneClose").onclick = closeModal;
-
-        var scriptURL =
-          "https://script.google.com/macros/s/AKfycbzea1-eYP3jFYbjqmcFNiNdA9_nfv4Kxpsfdwt-4Zc54kPwgiyanmsvf4X3i7OW4vh1/exec";
-
-        form.addEventListener("submit", function (e) {
+      var env = document.getElementById("envelope"),
+        page = document.getElementById("page");
+      function openInvite(instant) {
+        if (instant) {
+          env.classList.add("gone");
+          env.style.transition = "none";
+        } else env.classList.add("gone");
+        document.body.classList.remove("locked");
+        page.classList.add("show");
+        window.scrollTo(0, 0);
+        setTimeout(revealCheck, 150);
+        setTimeout(function () {
+          env.style.display = "none";
+        }, 1000);
+      }
+      document
+        .getElementById("openBtn")
+        .addEventListener("click", function (e) {
           e.preventDefault();
-          var name = nameEl.value.trim();
-          if (!name) {
-            errEl.textContent = "Атыңызды жазыңыз";
-            errEl.classList.add("show");
-            return;
-          }
-
-          var st = form.querySelector("input[name=status]:checked").value;
-          var statusText = st === "yes" ? "Ооба" : "Жок";
-
-          var params = new URLSearchParams();
-          params.append("name", name);
-          params.append("status", statusText);
-
-          submitEl.disabled = true;
-          submitEl.classList.add("loading");
-
-          fetch(scriptURL, { method: "POST", body: params })
-            .then(function () {
-              formView.hidden = true;
-              doneView.hidden = false;
-              form.reset();
-            })
-            .catch(function (err) {
-              console.error(err);
-              errEl.textContent = "Катачылык чыкты. Кайра аракет кылыңыз.";
-              errEl.classList.add("show");
-            })
-            .finally(function () {
-              submitEl.disabled = false;
-              submitEl.classList.remove("loading");
-            });
+          openInvite(false);
         });
+
+      /* Reveal animation */
+      var io =
+        "IntersectionObserver" in window
+          ? new IntersectionObserver(
+            function (es) {
+              es.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("in");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.15 },
+          )
+          : null;
+      var revealEls = [].slice.call(document.querySelectorAll(".reveal"));
+      function revealCheck() {
+        revealEls.forEach(function (el) {
+          io ? io.observe(el) : el.classList.add("in");
+        });
+      }
+      if (!io) revealCheck();
+
+      var cd = {
+        d: document.getElementById("cd-d"),
+        h: document.getElementById("cd-h"),
+        m: document.getElementById("cd-m"),
+        s: document.getElementById("cd-s"),
+      };
+      function pad(n) {
+        return n < 10 ? "0" + n : "" + n;
+      }
+      function tick() {
+        var diff = TARGET - Date.now();
+        if (isNaN(diff)) return;
+        if (diff <= 0) {
+          document.getElementById("countdown").hidden = true;
+          document.getElementById("cd-past").hidden = false;
+          return;
+        }
+        var s = Math.floor(diff / 1000);
+        cd.d.textContent = Math.floor(s / 86400);
+        cd.h.textContent = pad(Math.floor((s % 86400) / 3600));
+        cd.m.textContent = pad(Math.floor((s % 3600) / 60));
+        cd.s.textContent = pad(s % 60);
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      /* Calendar: Oct 2026 (Oct 1 is Thursday -> col index 3) */
+      (function () {
+        var body = document.getElementById("calBody");
+        if (!body) return;
+        var daysInMonth = 31,
+          firstWeekday = 3;
+        var rows = "",
+          cell = 0,
+          day = 1;
+        for (var r = 0; r < 6 && day <= daysInMonth; r++) {
+          var tr = "<tr>";
+          for (var c = 0; c < 7; c++, cell++) {
+            if (cell < firstWeekday || day > daysInMonth) {
+              tr += '<td class="pad">0</td>';
+            } else {
+              var sel = day === 28;
+              tr += sel
+                ? '<td class="sel"><span>' + day + "</span></td>"
+                : "<td>" + day + "</td>";
+              day++;
+            }
+          }
+          tr += "</tr>";
+          rows += tr;
+        }
+        body.innerHTML = rows;
       })();
-    </script>
-  </body>
+
+      /* RSVP modal */
+      var modal = document.getElementById("modal"),
+        form = document.getElementById("rsvpForm");
+      var formView = document.getElementById("formView"),
+        doneView = document.getElementById("doneView");
+      var nameEl = document.getElementById("name"),
+        errEl = document.getElementById("err"),
+        submitEl = document.getElementById("submit");
+
+      function openModal() {
+        formView.hidden = false;
+        doneView.hidden = true;
+        errEl.classList.remove("show");
+        modal.classList.add("open");
+        document.body.classList.add("locked");
+      }
+      function closeModal() {
+        modal.classList.remove("open");
+        document.body.classList.remove("locked");
+      }
+      document.getElementById("rsvpOpen2").onclick = openModal;
+      document.getElementById("modalClose").onclick = closeModal;
+      document.getElementById("doneClose").onclick = closeModal;
+
+      var scriptURL =
+        "https://script.google.com/macros/s/AKfycbzea1-eYP3jFYbjqmcFNiNdA9_nfv4Kxpsfdwt-4Zc54kPwgiyanmsvf4X3i7OW4vh1/exec";
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var name = nameEl.value.trim();
+        if (!name) {
+          errEl.textContent = "Атыңызды жазыңыз";
+          errEl.classList.add("show");
+          return;
+        }
+
+        var st = form.querySelector("input[name=status]:checked").value;
+        var statusText = st === "yes" ? "Ооба" : "Жок";
+
+        var params = new URLSearchParams();
+        params.append("name", name);
+        params.append("status", statusText);
+
+        submitEl.disabled = true;
+        submitEl.classList.add("loading");
+
+        fetch(scriptURL, { method: "POST", body: params })
+          .then(function () {
+            formView.hidden = true;
+            doneView.hidden = false;
+            form.reset();
+          })
+          .catch(function (err) {
+            console.error(err);
+            errEl.textContent = "Катачылык чыкты. Кайра аракет кылыңыз.";
+            errEl.classList.add("show");
+          })
+          .finally(function () {
+            submitEl.disabled = false;
+            submitEl.classList.remove("loading");
+          });
+      });
+    })();
+  </script>
+</body>
+
 </html>
